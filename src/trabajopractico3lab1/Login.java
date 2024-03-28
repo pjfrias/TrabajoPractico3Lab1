@@ -130,7 +130,7 @@ public class Login extends javax.swing.JFrame {
          
         if(!password.isEmpty()&& !usuario.isEmpty()){
          if(usuario.equals("alumno@ulp.edu.ar")&& password.equals("12345678")){
-             JOptionPane.showMessageDialog(null, "Bienvenidos");
+             JOptionPane.showMessageDialog(null, "Bienvenido usuario " + usuario + "!!");
          
          }else{
          JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
