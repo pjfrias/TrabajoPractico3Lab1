@@ -43,7 +43,7 @@ public class Login extends javax.swing.JFrame {
             if(validacionUsuario(usuario)){
                 System.out.println(usuario + " " + password);
                 if(usuario.equals("alumno@ulp.edu.ar") && password.equals("12345678"))
-                    JOptionPane.showMessageDialog(null, "Bienvenidos");
+                    JOptionPane.showMessageDialog(null, "Bienvenido usuario " + usuario + "!!");
                 else JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
             }else JOptionPane.showMessageDialog(null, "Formato de usuario invalido");
         }else JOptionPane.showMessageDialog(null, "Faltan campos por rellenar");
