@@ -121,15 +121,22 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         String usuario= jTEmail.getText( );
+        
          String password= jPPass.getText();
+          
          System.out.println(" "+usuario + password);
+         
+        if(!password.isEmpty()&& !usuario.isEmpty()){
          if(usuario.equals("alumno@ulp.edu.ar")&& password.equals("12345678")){
              JOptionPane.showMessageDialog(null, "Bienvenidos");
          
          }else{
          JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
          }
+         }else{
+            JOptionPane.showMessageDialog(null, "No se puede dejar campos vacios!!");}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
