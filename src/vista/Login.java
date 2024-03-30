@@ -1,56 +1,13 @@
 package vista;
-
-import javax.swing.JOptionPane;
+import vista.metodos.MetodosLogin;
 
 public class Login extends javax.swing.JFrame {
     
-    public boolean validacionCampo(String usuario, String password){
-        if(usuario.isEmpty() || password.isEmpty()) return false;
-        return true;
-    }
+    private MetodosLogin metodos;
     
-    /*
-        No es la forma de validar un usuario (estoy probando)
-    */
-    public boolean validacionUsuario(String usuario){
-        int cont = 0;
-        int index = 0;
-        for(int i = 0; i < usuario.length(); i++){
-            if(usuario.charAt(i) == '@'){
-                cont = 1;
-                index = i;
-                break;
-            }
-        }
-        
-        if(cont == 1){
-            for (int i = index; i < usuario.length(); i++) {
-                if(usuario.charAt(i) == '.'){
-                    cont = 2;
-                    break;
-                }
-            }
-        }
-        
-        System.out.println(cont);
-        if(cont == 2) return true;
-        else return false;
-    }
-    
-    public void validacionInicioSesion(String usuario, String password){
-        if(validacionCampo(usuario, password)){
-            if(validacionUsuario(usuario)){
-                System.out.println(usuario + " " + password);
-                if(usuario.equals("alumno@ulp.edu.ar") && password.equals("12345678"))
-                    JOptionPane.showMessageDialog(null, "Bienvenido usuario " + usuario + "!!");
-                else JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
-            }else JOptionPane.showMessageDialog(null, "Formato de usuario invalido");
-        }else JOptionPane.showMessageDialog(null, "Faltan campos por rellenar");
-        
-    }
-
     public Login() {
         initComponents();
+        metodos = new MetodosLogin();
     }
 
     @SuppressWarnings("unchecked")
@@ -148,7 +105,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        validacionInicioSesion(jTEmail.getText(), jPPass.getText());
+        metodos.validacionInicioSesion(jTEmail.getText(), jPPass.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
