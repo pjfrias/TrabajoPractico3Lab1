@@ -1,4 +1,4 @@
-package trabajopractico3lab1;
+package vista;
 
 import javax.swing.JOptionPane;
 
@@ -12,7 +12,6 @@ public class Login extends javax.swing.JFrame {
     /*
         No es la forma de validar un usuario (estoy probando)
     */
-    
     public boolean validacionUsuario(String usuario){
         int cont = 0;
         int index = 0;

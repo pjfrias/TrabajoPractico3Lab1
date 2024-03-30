@@ -1,6 +1,8 @@
-package trabajopractico3lab1;
+package main;
 
-public class TrabajoPractico3Lab1 {
+import vista.Login;
+
+public class Main {
 
     public static void main(String[] args) {
         Login ventana = new Login();
