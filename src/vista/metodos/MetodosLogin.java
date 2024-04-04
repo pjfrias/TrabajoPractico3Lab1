@@ -46,7 +46,7 @@ public class MetodosLogin {
                 if(usuario.equals("alumno@ulp.edu.ar") && password.equals("12345678"))
                     JOptionPane.showMessageDialog(null, "Bienvenido usuario " + usuario + "!!");
                 else JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
-            }else JOptionPane.showMessageDialog(null, "Formato de usuario invalido");
+            }else JOptionPane.showMessageDialog(null, "Email con formato incorrecto, ingrese un formato de email valido : usuario@servidor.xxx");
         }else JOptionPane.showMessageDialog(null, "Faltan campos por rellenar");
     }
 }
